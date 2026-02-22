@@ -1,0 +1,5 @@
+curl --location 'localhost:4000/posts' \
+--header 'Content-Type: application/json' \
+--data '{
+    "title": "Test"
+}'
