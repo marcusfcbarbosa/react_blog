@@ -16,7 +16,6 @@ app.post('/posts', (req, res) => {
     //associate a id with a post created 
     const id = randomBytes(4).toString('hex');
     const { title } = req.body;
-
     posts[id]={
         id,title
     };  

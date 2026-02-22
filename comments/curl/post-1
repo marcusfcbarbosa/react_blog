@@ -1,0 +1,5 @@
+curl --location 'localhost:4001/posts/67bcb66a/comments?=null' \
+--header 'Content-Type: application/json' \
+--data '{
+    "content": "second comment"
+}'
