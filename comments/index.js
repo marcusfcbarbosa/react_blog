@@ -2,8 +2,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors');
 
 app.use(bodyParser.json()); //return in jason format
+app.use(cors()); //middleware
+
 const { randomBytes } = require('crypto');
 
 const commentsByPostId = {};

@@ -3,7 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(bodyParser.json()); //return in jason format
+const cors = require('cors');
+
+app.use(bodyParser.json()); //return in jason format  middleware
+app.use(cors());
 const { randomBytes } = require('crypto');
 //store for now in memory
 const posts = {};
