@@ -1,11 +1,16 @@
-import React from "react";
+import React , {useState} from "react";
+import axios   from 'axios';
+
+
 export default () => {
+    const [ title ,setTitle] = useState('');
     return (
         <div>
             <form>
                 <div className="form-group">
                     <label>Title</label>
-                    <input className="form-control" />
+                    <input value={title} onChange={event=> 
+                        setTitle(event.target.value)} className="form-control" />
                 </div>
                 <button className="btn btn-primary"> Submit  </button>
             </form>
